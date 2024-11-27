@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projekt_za_pmu.MainPage">
+
+    <ScrollView>
+        <AbsoluteLayout>
+            <Label
+                Text="Izaberite način izračuna"
+                FontSize="20"
+                HorizontalOptions="Center"
+                AbsoluteLayout.LayoutBounds="0.5,0.1,0.8,AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            />
+
+            <Button
+                Text="Vrijeme slobodnog pada"
+                Clicked="OnFreeFallModeSelected"
+                AbsoluteLayout.LayoutBounds="0.5, 0.2, 0.8, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            />
+            <Button
+                Text="Brzina vala"
+                Clicked="OnWaveSpeedModeSelected"
+                AbsoluteLayout.LayoutBounds="0.5, 0.3, 0.8, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            />
+
+            <Entry
+                x:Name="HeightEntry"
+                Placeholder="Unesi visinu (m)"
+                Keyboard="Numeric"
+                AbsoluteLayout.LayoutBounds="0.5, 0.4, 0.8, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+                IsVisible="False"
+            />
+            <Entry
+                x:Name="GravityEntry"
+                Placeholder="Unesi gravitacijsku konstantu (m/s²)"
+                Keyboard="Numeric"
+                AbsoluteLayout.LayoutBounds="0.5, 0.55, 0.8, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+                IsVisible="False"
+            />
+
+            <Entry
+                x:Name="FrequencyEntry"
+                Placeholder="Unesi frekvenciju (Hz)"
+                Keyboard="Numeric"
+                AbsoluteLayout.LayoutBounds="0.5, 0.4, 0.8, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+                IsVisible="False"
+            />
+            <Entry
+                x:Name="WavelengthEntry"
+                Placeholder="Unesi valnu duljinu (m)"
+                Keyboard="Numeric"
+                AbsoluteLayout.LayoutBounds="0.5, 0.55, 0.8, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+                IsVisible="False"
+            />
+
+            <Button
+                Text="Izračunaj"
+                Clicked="OnCalculateClicked"
+                AbsoluteLayout.LayoutBounds="0.5, 0.7, 0.8, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            />
+
+            <Label
+                x:Name="ResultLabel"
+                Text="Rezultat"
+                FontSize="18"
+                AbsoluteLayout.LayoutBounds="0.5, 0.8, 0.8, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            />
+
+        </AbsoluteLayout>
+    </ScrollView>
+</ContentPage>
